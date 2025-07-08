@@ -99,11 +99,18 @@ export default function Partnership() {
         return
       }
 
+      // 3. EmailJS 로딩 체크
+      if (!emailjsLoaded) {
+        alert('메일 전송 모듈이 로딩 중입니다. 잠시 후 다시 시도해주세요.')
+        setIsLoading(false)
+        return
+      }
+
       const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
         action: 'partnership_form'
       })
 
-      // 3. EmailJS로 메일 발송
+      // 4. EmailJS로 메일 발송
       const templateParams = {
         name: formData.contactName,
         email: formData.email,
@@ -145,7 +152,7 @@ SpokeHouse 기업 협업 시스템`,
         EMAILJS_PUBLIC_KEY
       )
 
-      // 4. 성공 처리
+      // 5. 성공 처리
       alert('✅ 협업 문의가 성공적으로 전송되었습니다!\n기획안 검토 후 협업 방안을 제안드리겠습니다.')
       
       // Rate limiting을 위한 시간 저장
