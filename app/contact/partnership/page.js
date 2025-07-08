@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Script from 'next/script'
 
 export default function Partnership() {
@@ -18,6 +18,7 @@ export default function Partnership() {
   })
   const [isLoading, setIsLoading] = useState(false)
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false)
+  const [emailjsLoaded, setEmailjsLoaded] = useState(false)
 
   // EmailJS 설정 (환경변수에서 가져옴)
   const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
@@ -84,12 +85,14 @@ export default function Partnership() {
     setIsLoading(true)
 
     try {
+      // 1. Rate Limiting 체크
       if (!checkRateLimit()) {
         alert('보안상 5분 후에 다시 시도해주세요.')
         setIsLoading(false)
         return
       }
 
+      // 2. reCAPTCHA 검증
       if (!recaptchaLoaded) {
         alert('보안 모듈이 로딩 중입니다. 잠시 후 다시 시도해주세요.')
         setIsLoading(false)
@@ -100,6 +103,7 @@ export default function Partnership() {
         action: 'partnership_form'
       })
 
+      // 3. EmailJS로 메일 발송
       const templateParams = {
         name: formData.contactName,
         email: formData.email,
@@ -129,7 +133,7 @@ ${formData.planDocument ? formData.planDocument : '별도 공유 예정'}
 
 ---
 SpokeHouse 기업 협업 시스템`,
-        title: `기업 협업 - ${formData.companyName}`,
+        title: `기업 협업 - ${formData.companyName}`, // 템플릿의 {{title}} 변수
         reply_to: formData.email,
         'g-recaptcha-response': token
       }
@@ -141,9 +145,13 @@ SpokeHouse 기업 협업 시스템`,
         EMAILJS_PUBLIC_KEY
       )
 
+      // 4. 성공 처리
       alert('✅ 협업 문의가 성공적으로 전송되었습니다!\n기획안 검토 후 협업 방안을 제안드리겠습니다.')
       
+      // Rate limiting을 위한 시간 저장
       localStorage.setItem('lastPartnershipSubmit', Date.now().toString())
+      
+      // 폼 초기화
       
       setFormData({
         companyName: '',
@@ -179,6 +187,7 @@ SpokeHouse 기업 협업 시스템`,
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         onLoad={() => {
           window.emailjs.init(EMAILJS_PUBLIC_KEY)
+          setEmailjsLoaded(true)
         }}
       />
 
