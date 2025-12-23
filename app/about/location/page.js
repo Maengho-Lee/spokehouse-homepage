@@ -83,10 +83,10 @@ export default function Location() {
                     <div>
                       <h3 className="text-lg font-bold text-gray-800 mb-2">주소</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        <span className="font-semibold text-blue-600">경기도 광명시 범안로996번길 6</span><br/>
-                        광명티아모IT타워 918호
+                        <span className="font-semibold text-blue-600">경기도 화성시 동탄감배산로 143</span><br/>
+                        유림노르웨이숲 202동 711호
                       </p>
-                      <p className="text-sm text-gray-500 mt-2">우편번호: 14322</p>
+                      <p className="text-sm text-gray-500 mt-2">우편번호: 18479</p>
                     </div>
                   </div>
 
@@ -122,30 +122,27 @@ export default function Location() {
                   <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                     <h3 className="text-lg font-bold text-blue-800 mb-4">🚗 자가용 이용시</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• 경부고속도로 → 서울외곽순환고속도로</li>
-                      <li>• 광명IC 또는 일직IC 이용</li>
-                      <li>• 광명시청 방향으로 진행</li>
-                      <li>• 광명티모아IT타워 (주차장 이용 가능)</li>
+                      <li>• 수원광명고속도로</li>
+                      <li>• 북오산IC 또는 동탄IC 이용</li>
+                      <li>• 동탄역 방향으로 진행</li>
+                      <li>• 유림노르웨이숲 202동 (주차장 이용 가능)</li>
                     </ul>
                   </div>
 
                   <div className="bg-green-50 p-6 rounded-xl border border-green-100">
                     <h3 className="text-lg font-bold text-green-800 mb-4">🚇 대중교통 이용시</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• <span className="font-semibold">지하철 1호선</span> 광명역 하차</li>
-                      <li>• 광명역에서 버스 이용 (약 10분)</li>
-                      <li>• <span className="font-semibold">광명 11번, 15번</span> 버스 탑승</li>
-                      <li>• 광명티모아IT타워 정류장 하차</li>
+                      <li>• <span className="font-semibold">GTX-A</span> 동탄역 하차</li>
+                      <li>• 도보 (약 15분)</li>
                     </ul>
                   </div>
 
                   <div className="bg-orange-50 p-6 rounded-xl border border-orange-100">
                     <h3 className="text-lg font-bold text-orange-800 mb-4">📍 주요 랜드마크</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• 광명시청 (도보 5분)</li>
-                      <li>• 광명전통시장 (도보 10분)</li>
-                      <li>• 광명역 (차량 15분)</li>
-                      <li>• 광명사거리역 (차량 10분)</li>
+                      <li>• 동탄여울공원 (도보 5분)</li>
+                      <li>• 동탄역 (도보 15분)</li>
+                      <li>• 반석산 근린공원 (차량 10분)</li>
                     </ul>
                   </div>
                 </div>
@@ -164,7 +161,7 @@ export default function Location() {
               {/* 구글맵 iframe - 새로운 정확한 좌표와 마커 */}
               <div className="relative w-full h-96 bg-gray-100 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=ko&amp;q=37.4588899,126.8747852+(SpokeHouse+-+경기도+광명시+범안로996번길+6)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+                  src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=ko&amp;q=37.198672,127.089287+(SpokeHouse+-+경기도+화성시+동탄감배산로+143)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -172,14 +169,14 @@ export default function Location() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-xl"
-                  title="SpokeHouse 위치 지도 - 경기도 광명시 범안로 996번길 6"
+                  title="SpokeHouse 위치 지도 - 경기도 화성시 동탄감배산로 143"
                 ></iframe>
               </div>
 
               {/* 지도 하단 버튼들 */}
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://www.google.com/maps/place/경기도+광명시+범안로996번길+6/data=!4m6!3m5!1s0x357b618edd646353:0x8455fce827790ebe!8m2!3d37.4588899!4d126.8747852!16s%2Fg%2F11bz7xwq4p?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps/search/?api=1&query=37.198672,127.089287"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
@@ -187,7 +184,7 @@ export default function Location() {
                   📍 구글맵에서 보기
                 </a>
                 <button 
-                  onClick={() => navigator.clipboard.writeText('경기도 광명시 범안로996번길 6 광명티아모IT타워 918호')}
+                  onClick={() => navigator.clipboard.writeText('경기도 화성시 동탄감배산로 143 유림노르웨이숲 202동 711호')}
                   className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-bold text-center transition-all duration-300"
                 >
                   📋 주소 복사하기
@@ -201,7 +198,7 @@ export default function Location() {
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
               <h3 className="text-3xl font-bold mb-4">언제든지 방문해 주세요</h3>
               <p className="text-xl mb-8 text-blue-100">
-                전자기기 개발에 대한 모든 궁금증을 해결해드립니다
+                전자 개발에 대한 모든 궁금증을 해결해드립니다
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

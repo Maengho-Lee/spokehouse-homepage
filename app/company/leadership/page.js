@@ -80,7 +80,7 @@ export default function Leadership() {
                 <div className="mt-6 space-y-2 text-center">
                   <p className="text-blue-100">SpokeHouse 창립자</p>
                   <p className="text-blue-100">전자공학 전문가</p>
-                  <p className="text-blue-100">깊게 고민하고 작은일에도 최선을 다하는 'Spoke'</p>
+                  <p className="text-blue-100">깊게 고민하고 작은일에도 최선을 다하는 'Spoke House'</p>
                 </div>
               </div>
 
