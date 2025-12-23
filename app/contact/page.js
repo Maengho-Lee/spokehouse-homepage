@@ -168,7 +168,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">주소</h3>
-                  <p className="text-gray-600">경기도 광명시 범안로996번길 6<br />광명티아모IT타워 918호</p>
+                  <p className="text-gray-600">경기도 화성시 동탄감배산로 143<br />유림노르웨이숲 202동 711호</p>
                 </div>
               </div>
             </div>

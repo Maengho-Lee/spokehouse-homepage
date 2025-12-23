@@ -558,7 +558,7 @@ SpokeHouse 기업 협업 시스템`,
                       </p>
                       <p className="flex items-center">
                         <span className="text-blue-400 mr-3">🏢</span>
-                        <span className="text-sm">경기도 광명시 범안로996번길 6<br />광명티아모IT타워 918호</span>
+                        <span className="text-sm">경기도 화성시 동탄감배산로 143<br />유림노르웨이숲 202동 711호</span>
                       </p>
                     </div>
                   </div>

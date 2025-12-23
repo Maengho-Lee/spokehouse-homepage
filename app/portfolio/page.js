@@ -4,18 +4,8 @@ export default function Portfolio() {
   // 포트폴리오 프로젝트 데이터
   const portfolioProjects = [
     {
-      id: 17,
-      title: '콘크리트 양생온도 측정기 - 무선',
-      category: '하드웨어, 펌웨어, 기구, 양산',
-      tags: ['단독 진행', '자체 개발'],
-      image: '/portfolio/smart-lighting.jpg',
-      description: '콘크리트 양상온도 측정 및 서버 전송',
-      technologies: ['STM32', '회로설계', 'PCB Design', '펌웨어 개발', '기구설계', '양산'],
-      status: 'completed'
-    },
-    {
       id: 16,
-      title: '콘크리트 양생온도 측정기 - 유선',
+      title: '콘크리트 양생온도 측정기 - 유선센서',
       category: '하드웨어, 펌웨어, 기구, 양산',
       tags: ['단독 진행', 'ODM'],
       image: '/portfolio/smart-lighting.jpg',
