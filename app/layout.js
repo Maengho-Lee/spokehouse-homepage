@@ -39,11 +39,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-gray-100 min-h-screen">
         <Navbar />        
-        <noscript>
+        {/* <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2P6WX6Q"
         height="0" width="0" style="display:none;visibility:hidden">
         </iframe>
-        </noscript>
+        </noscript> */}
         <main>{children}</main>
         <Footer />
       </body>
