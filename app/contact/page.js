@@ -13,6 +13,13 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false)
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false)
 
+  // OpenAI Ads 픽셀 전환 이벤트 - /contact 페이지 방문 시 발화
+  useEffect(() => {
+    window.oaiq?.('measure', 'lead_created', {
+      type: 'customer_action'
+    })
+  }, [])
+
   // EmailJS 설정 (환경변수에서 가져옴)
   const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
   const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
@@ -82,7 +89,7 @@ export default function Contact() {
 
       // 4. 성공 처리
       alert('✅ 문의가 성공적으로 전송되었습니다!\n빠른 시일 내에 답변드리겠습니다.')
-      
+
       // Rate limiting을 위한 시간 저장
       localStorage.setItem('lastContactSubmit', Date.now().toString())
       

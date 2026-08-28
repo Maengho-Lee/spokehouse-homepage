@@ -4,6 +4,36 @@ export default function Portfolio() {
   // 포트폴리오 프로젝트 데이터
   const portfolioProjects = [
     {
+      id: 19,
+      title: '수소 생산기 드라이어',
+      category: '하드웨어, 펌웨어, 기구',
+      tags: ['단독 진행', 'ODM', '양산'],
+      image: '/portfolio/smart-lighting.jpg',
+      description: '수소 생산 후 드라이 과정 제어',
+      technologies: ['STM32', '회로설계', 'PCB Design', '펌웨어 개발', '양산'],
+      status: 'in-progress'
+    },
+    {
+      id: 18,
+      title: '마이크로디스팬서 - 피에조엑츄에이터',
+      category: '하드웨어, 펌웨어, 기구',
+      tags: ['단독 진행', 'ODM', '양산'],
+      image: '/portfolio/smart-lighting.jpg',
+      description: '피에조 엑츄에이터 및 드라이버 제어',
+      technologies: ['STM32', '회로설계', 'PCB Design', '펌웨어 개발', '양산'],
+      status: 'in-progress'
+    },
+    {
+      id: 17,
+      title: '콘크리트 양생온도 측정기 - 무선',
+      category: '하드웨어, 펌웨어, 기구',
+      tags: ['단독 진행', '자체개발'],
+      image: '/portfolio/smart-lighting.jpg',
+      description: '콘크리트 양상온도 측정 및 서버 전송',
+      technologies: ['STM32', '회로설계', 'PCB Design', '펌웨어 개발', '기구설계', '양산'],
+      status: 'in-progress'
+    },
+    {
       id: 16,
       title: '콘크리트 양생온도 측정기 - 유선센서',
       category: '하드웨어, 펌웨어, 기구, 양산',
@@ -261,8 +291,10 @@ export default function Portfolio() {
                           : project.category === '하드웨어 개발' ? '⚡' : '💻'
                       )}
                     </div>
-                    <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                      완료
+                    <span className={`text-white text-xs px-2 py-1 rounded-full ${
+                      project.status === 'in-progress' ? 'bg-yellow-500' : 'bg-green-500'
+                    }`}>
+                      {project.status === 'in-progress' ? '진행중' : '완료'}
                     </span>
                   </div>
                   {/* 프로젝트 제목 */}
