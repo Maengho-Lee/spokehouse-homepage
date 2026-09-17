@@ -558,7 +558,7 @@ SpokeHouse 기업 협업 시스템`,
                       </p>
                       <p className="flex items-center">
                         <span className="text-blue-400 mr-3">🏢</span>
-                        <span className="text-sm">경기도 화성시 동탄감배산로 143<br />유림노르웨이숲 202동 711호</span>
+                        <span className="text-sm">경기도 오산시 경기대로761번길 30<br />현대프리미어캠퍼스 A동 1217호</span>
                       </p>
                     </div>
                   </div>

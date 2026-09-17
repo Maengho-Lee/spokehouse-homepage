@@ -83,10 +83,10 @@ export default function Location() {
                     <div>
                       <h3 className="text-lg font-bold text-gray-800 mb-2">주소</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        <span className="font-semibold text-blue-600">경기도 화성시 동탄감배산로 143</span><br/>
-                        유림노르웨이숲 202동 711호
+                        <span className="font-semibold text-blue-600">경기도 오산시 경기대로761번길 30</span><br/>
+                        현대프리미어캠퍼스 A동 1217호
                       </p>
-                      <p className="text-sm text-gray-500 mt-2">우편번호: 18479</p>
+                      <p className="text-sm text-gray-500 mt-2">우편번호: 18112</p>
                     </div>
                   </div>
 
@@ -122,27 +122,26 @@ export default function Location() {
                   <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                     <h3 className="text-lg font-bold text-blue-800 mb-4">🚗 자가용 이용시</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• 수원광명고속도로</li>
-                      <li>• 북오산IC 또는 동탄IC 이용</li>
-                      <li>• 동탄역 방향으로 진행</li>
-                      <li>• 유림노르웨이숲 202동 (주차장 이용 가능)</li>
+                      <li>• 북오산IC 이용</li>
+                      <li>• 세마역 방향으로 진행</li>
+                      <li>• 현대프리미어캠퍼스 (주차장 이용 가능)</li>
                     </ul>
                   </div>
 
                   <div className="bg-green-50 p-6 rounded-xl border border-green-100">
                     <h3 className="text-lg font-bold text-green-800 mb-4">🚇 대중교통 이용시</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• <span className="font-semibold">GTX-A</span> 동탄역 하차</li>
-                      <li>• 도보 (약 15분)</li>
+                      <li>• <span className="font-semibold">1호선</span> 세마역 하차</li>
+                      <li>• 도보 (약 5분)</li>
                     </ul>
                   </div>
 
                   <div className="bg-orange-50 p-6 rounded-xl border border-orange-100">
                     <h3 className="text-lg font-bold text-orange-800 mb-4">📍 주요 랜드마크</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• 동탄여울공원 (도보 5분)</li>
-                      <li>• 동탄역 (도보 15분)</li>
-                      <li>• 반석산 근린공원 (차량 10분)</li>
+                      <li>• 북오산IC (차량 5분)</li>
+                      <li>• 세마역 (도보 5분)</li>
+                      <li>• 오산시 유엔군 초전기념관 (차량 3분)</li>
                     </ul>
                   </div>
                 </div>
@@ -161,7 +160,7 @@ export default function Location() {
               {/* 구글맵 iframe - 새로운 정확한 좌표와 마커 */}
               <div className="relative w-full h-96 bg-gray-100 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=ko&amp;q=37.198672,127.089287+(SpokeHouse+-+경기도+화성시+동탄감배산로+143)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+                  src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=ko&amp;q=37.1869737,127.0461713+(SpokeHouse+-+경기도+오산시+경기대로761번길+30)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -169,14 +168,14 @@ export default function Location() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-xl"
-                  title="SpokeHouse 위치 지도 - 경기도 화성시 동탄감배산로 143"
+                  title="SpokeHouse 위치 지도 - 경기도 오산시 경기대로761번길 30"
                 ></iframe>
               </div>
 
               {/* 지도 하단 버튼들 */}
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=37.198672,127.089287"
+                  href="https://www.google.com/maps/search/?api=1&query=37.1869737,127.0461713"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
@@ -184,7 +183,7 @@ export default function Location() {
                   📍 구글맵에서 보기
                 </a>
                 <button 
-                  onClick={() => navigator.clipboard.writeText('경기도 화성시 동탄감배산로 143 유림노르웨이숲 202동 711호')}
+                  onClick={() => navigator.clipboard.writeText('경기도 오산시 경기대로761번길 30 현대프리미어캠퍼스 A동 1217호')}
                   className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-bold text-center transition-all duration-300"
                 >
                   📋 주소 복사하기

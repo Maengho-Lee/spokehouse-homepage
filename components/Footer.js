@@ -17,8 +17,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">주소</h3>
             <p className="text-gray-300">
-              경기도 화성시 동탄감배산로 143 <br />
-              유림노르웨이숲 202동 711호 (주)스포크하우스
+              경기도 오산시 경기대로761번길 30 <br />
+              현대프리미어캠퍼스 A동 1217호 (주)스포크하우스
             </p>
           </div>
         </div>
